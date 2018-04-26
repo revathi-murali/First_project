@@ -15,3 +15,5 @@ sample commit
 sample commit 2
 
 sample test
+
+sample test 2
