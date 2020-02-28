@@ -1,0 +1,22 @@
+name: Display
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # - name: Run a one-line script
+    #   run: echo Hello, world!
+    # - name: Run a multi-line script
+    #   run: |
+    #     echo Add other actions to build,
+    #     echo test, and deploy your project.
+    - name: Sample docker setup
+      id: sample_docker
+      uses: revathi-murali/First_project@v1
+      with:
+        image_name: 'My image name is alpine'
+        region: 'us-east-1'

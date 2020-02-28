@@ -1,0 +1,12 @@
+name: 'Sample Action'
+description: 'Try using docker for actions'
+inputs:
+  image_name:
+    description: 'Image name'
+    required: true
+  region:
+    description: 'Aws region'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
