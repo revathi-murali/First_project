@@ -1,6 +1,6 @@
 FROM alpine:3.10
 
-RUN apk add --update jq
+RUN apk add --update jq bash
 
 # Necessary packages for installing pip
 RUN apk add --update python3 python3-dev && \
@@ -14,6 +14,3 @@ RUN pip3 install awscli
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-
-
-

@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+INPUT_ENV_VARIABLES=("INPUT_AWS_ACCESS_KEY_ID" "INPUT_AWS_SECRET_ACCESS_KEY" "INPUT_AWS_REGION" "INPUT_AWS_ACCOUNT_ID")
 
 echo "Gonna echo input value using $1"
 echo $1
