@@ -2,6 +2,5 @@ Sample 3
 sample 3
 Sample ABC
 
-Edited some changes
 
 Sample BCV
