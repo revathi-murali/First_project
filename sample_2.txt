@@ -1,11 +1,2 @@
 Hey hello
 test test test
-
-
-Adding text in sample_2.txt
-
-Some more text 1
-
-Some more text 2
-
-Some more text 3
