@@ -1,0 +1,16 @@
+name: Image Scan
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: revathi-murali/aws_ecr_image_scan_action@v2
+      with:
+        aws_region: 'us-east-1'
+        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+        aws_ecr_repo: 'alpine-fd'
