@@ -1,0 +1,31 @@
+---
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+  # push:
+  #   branches:
+  #     - master
+
+permissions:
+  packages: write
+  checks: write
+  contents: read
+  id-token: write
+  issues: write
+  pull-requests: write
+  security-events: write
+
+jobs:
+  context:
+    name: Context
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if env is set
+        uses: actions/github-script@v6.3.3
+        with:
+          script: |
+            var current_env = process.env.GITHUB_HEAD_REF
+            console.log("Current_env is", process.env.GITHUB_HEAD_REF)
+            console.log(`${current_env}`)
+            core.exportVariable("TEST_NAMESPACE", "sentry" + "-" + `${current_env}`);
+            console.log("Test namespace value is", process.env.TEST_NAMESPACE)
